@@ -1,6 +1,6 @@
 {
   "name": "vst-guide-library",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A shared library of music-related elements used by VST Guide",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,10 @@
   },
   "homepage": "https://github.com/bmcclure/node-vst-guide-library#readme",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "nedb-promises": "^1.1.2",
     "vst-guide-api": "^0.0.1",
     "vst-guide-config": "^0.0.3",
-    "vst-scanner": "^0.0.2"
+    "vst-scanner": "^0.0.5"
   }
 }

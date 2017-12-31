@@ -331,9 +331,9 @@ vst-guide-config@^0.0.3:
   dependencies:
     configstore "^3.1.1"
 
-vst-scanner@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/vst-scanner/-/vst-scanner-0.0.2.tgz#06a0b4c3896149ae6e8a0d1e13240cec7be13209"
+vst-scanner@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/vst-scanner/-/vst-scanner-0.0.5.tgz#b3cc856a5c505110b95e2ebe3103df9ebe66d1f2"
   dependencies:
     bluebird "^3.5.1"
     node-dir "^0.1.17"

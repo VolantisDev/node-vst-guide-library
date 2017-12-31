@@ -1,7 +1,15 @@
-var config = require('vst-guide-config')
-var vstScanner = require('vst-scanner')
+var vstScanner = require('./lib/importers/vst-scanner')
+var db = require('./lib/local-database')
+var api = require('./lib/api')
 
-vstScanner.scan(config.get('vstPaths'))
+vstScanner()
   .then(function (results) {
-    console.log(results)
+    return api.populateAllPluginInfo()
+      .then(function () {
+        return db.find('plugin')
+      })
+      .then(function (findResults) {
+        console.log(findResults)
+        console.log('Added/updated ' + Object.keys(results).length + ' items.')
+      })
   })
