@@ -1,0 +1,22 @@
+{
+  "name": "vst-guide-library",
+  "version": "0.0.1",
+  "description": "A shared library of music-related elements used by VST Guide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "bmcclure/node-vst-guide-library",
+  "author": "Ben McClure <ben.mcclure@gmail.com> (http://benmcclure.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmcclure/node-vst-guide-library/issues"
+  },
+  "homepage": "https://github.com/bmcclure/node-vst-guide-library#readme",
+  "dependencies": {
+    "nedb-promises": "^1.1.2",
+    "vst-guide-api": "^0.0.1",
+    "vst-guide-config": "^0.0.3",
+    "vst-scanner": "^0.0.2"
+  }
+}
