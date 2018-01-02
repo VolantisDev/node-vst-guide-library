@@ -3,5 +3,6 @@ module.exports = {
   db: require('./lib/local-database'),
   sources: require('./lib/sources'),
   importers: require('./lib/importers'),
-  types: require('./lib/types')
+  types: require('./lib/types'),
+  collections: require('./lib/collections')
 }

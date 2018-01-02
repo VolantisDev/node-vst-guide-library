@@ -1,15 +1,21 @@
 var vstScanner = require('./lib/importers/vst-scanner')
+var apiImporter = require('./lib/importers/api-importer')
 var db = require('./lib/local-database')
-var api = require('./lib/api')
 
 vstScanner()
   .then(function (results) {
-    return api.populateAllPluginInfo()
+    return apiImporter()
       .then(function () {
-        return db.find('plugin')
+        return db.find('plugin', {}, { followRedirects: true })
       })
-      .then(function (findResults) {
-        console.log(findResults)
-        console.log('Added/updated ' + Object.keys(results).length + ' items.')
+      .then(function (plugins) {
+        return db.find('developer', {})
+          .then(function (developers) {
+            console.log(plugins)
+            console.log(developers)
+            console.log('Added/updated ' + Object.keys(results).length + ' items.')
+            console.log('Total library items (excluding redirects): ' + plugins.length)
+            console.log('Total developers: ' + developers.length)
+          })
       })
   })
