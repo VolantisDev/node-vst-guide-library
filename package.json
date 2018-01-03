@@ -1,6 +1,6 @@
 {
   "name": "vst-guide-library",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A shared library of music-related elements used by VST Guide",
   "main": "index.js",
   "scripts": {
